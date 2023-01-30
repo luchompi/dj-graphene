@@ -1,0 +1,56 @@
+Create:
+mutation{
+  createCliente(uid:"1234",nombre:"John",apellido:"Doe",direccion:"TEST",telefono:"1234567890",email:"john@mail.to"){
+   cliente{
+     uid
+    nombre
+    apellido
+    direccion
+    telefono
+    email
+  }
+  }
+}
+
+Read:
+query{
+  clientes{
+    uid
+    nombre
+  }
+}
+-- los argumentos se definen asi
+query{
+  clientes(Aqui args, example uid: "1234"){
+    uid
+    nombre
+  }
+}
+
+Update:
+mutation{
+  updateCliente(uid:"1234",nombre:"PEPE"){
+   cliente{
+    uid
+    nombre
+    apellido
+    direccion
+    telefono
+    email
+  }
+  }
+}
+
+Delete:
+mutation{
+  deleteCliente(uid:"1234"){
+   cliente{
+    uid
+    nombre
+    apellido
+    direccion
+    telefono
+    email
+  }
+  }
+}
